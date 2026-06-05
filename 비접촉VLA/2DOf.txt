@@ -1,0 +1,706 @@
+PS C:\Users\0328j\OneDrive\Desktop\지각모델> & c:/Users/0328j/OneDrive/Desktop/지각모델/.venv/Scripts/python.exe c:/Users/0328j/OneDrive/Desktop/지각모델/VLA기초완성11/main.py
+pybullet build time: May 10 2026 13:57:19
+============================================================
+VISION LANGUAGE ACTION SYSTEM
+============================================================
+============================================================
+INITIALIZING VISION ENGINE
+DEVICE: cpu
+CPU PROFILE: ON
+RESIZE WIDTH: 768
+POINT STEP: 2
+MAX OBJECTS: 18
+MESH: OFF
+DEPTH MODEL: depth-anything/Depth-Anything-V2-Base-hf
+============================================================
+LOADING DEPTH MODEL
+============================================================
+LOADING MOBILE SAM
+============================================================
+LOADING SIGLIP
+============================================================
+VISION ENGINE READY
+============================================================
+PROCESSING IMAGE
+IMAGE: 768 x 576
+============================================================
+PREDICTING DEPTH
+============================================================
+BUILDING POINT CLOUD
+============================================================
+SEGMENTING OBJECTS
+OBJECT: 0 white
+OBJECT: 1 gray
+OBJECT: 2 gray
+OBJECT: 3 gray
+OBJECT: 4 blue
+OBJECT: 5 gray
+OBJECT: 6 gray
+OBJECT: 7 red
+OBJECT: 8 gray
+OBJECT: 9 gray
+OBJECT: 10 green
+OBJECT: 11 white
+OBJECT: 12 white
+OBJECT: 13 gray
+OBJECT: 14 black
+OBJECT: 15 gray
+OBJECT: 16 red
+OBJECT: 17 gray
+LABEL: 0 ['paper', 'book', 'notebook']
+LABEL: 1 ['paper', 'mouse', 'book']
+LABEL: 2 ['book', 'cable', 'bottle']
+LABEL: 3 ['paper', 'book', 'bottle']
+LABEL: 4 ['paper', 'bottle', 'cable']
+LABEL: 5 ['book', 'box', 'cable']
+LABEL: 6 ['mouse', 'book', 'cable']
+LABEL: 7 ['mouse', 'paper', 'notebook']
+LABEL: 8 ['mouse', 'book', 'paper']
+LABEL: 9 ['paper', 'book', 'notebook']
+LABEL: 10 ['paper', 'book', 'bottle']
+LABEL: 11 ['mouse', 'paper', 'bottle']
+LABEL: 12 ['book', 'paper', 'bottle']
+LABEL: 13 ['paper', 'mouse', 'cable']
+LABEL: 14 ['book', 'mouse', 'bottle']
+LABEL: 15 ['mouse', 'cable', 'paper']
+LABEL: 16 ['paper', 'mouse', 'book']
+LABEL: 17 ['mouse', 'cable', 'bottle']
+============================================================
+VISION PROCESS COMPLETE
+============================================================
+INITIALIZING PYBULLET
+============================================================
+INITIALIZING PYBULLET
+starting thread 0
+started testThreads thread 0 with threadHandle 0000000000001398
+argc=2
+argv[0] = --unused
+argv[1] = --start_demo_name=Physics Server
+ExampleBrowserThreadFunc started
+Version = 4.6.0 - Build 32.0.101.6737
+Vendor = Intel
+Renderer = Intel(R) Graphics
+b3Printf: Selected demo: Physics Server
+starting thread 0
+started MotionThreads thread 0 with threadHandle 000000000000166C
+MotionThreadFunc thread started
+============================================================
+CREATING 5-DOF ARM ROBOT
+============================================================
+PYBULLET READY
+============================================================
+COORDINATE CHECK
+VISION: x=right y=up z=forward
+PYBULLET: x=right y=forward z=up
+STATUS: OK
+============================================================
+INITIALIZING PHI-3
+============================================================
+INITIALIZING ATTENTION ROBOT
+DEVICE: cpu
+============================================================
+LOADING PHI-3
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:08<00:00,  4.47s/it]
+Some parameters are on the meta device because they were offloaded to the cpu and disk.
+============================================================
+MODEL WARMUP
+C:\Users\0328j\OneDrive\Desktop\지각모델\.venv\lib\site-packages\transformers\generation\configuration_utils.py:515: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.0` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+C:\Users\0328j\OneDrive\Desktop\지각모델\.venv\lib\site-packages\transformers\generation\utils.py:1192: UserWarning: Unfeasible length constraints: `min_length` (15) is larger than the maximum possible length (14). Generation will stop at the defined maximum length. You should decrease the minimum length and/or increase the maximum length. Note that `max_length` is set to 14, its default value.
+  warnings.warn(
+C:\Users\0328j\OneDrive\Desktop\지각모델\.venv\lib\site-packages\transformers\generation\utils.py:1200: UserWarning: Unfeasible length constraints: `min_new_tokens` (5), when added to the prompt length (10), is larger than the maximum possible length (14). Generation will stop at the defined maximum length. You should decrease the minimum length and/or increase the maximum length. Note that `max_length` is set to 14, its default value.
+  warnings.warn(
+You are not running the flash-attention implementation, expect numerical differences.
+============================================================
+ATTENTION ROBOT READY
+============================================================
+SYSTEM READY
+============================================================
+COMMANDS:
+  exit
+  objects
+  history
+  clear
+============================================================
+
+USER > hello?
+============================================================
+PHI-3 THINKING
+============================================================
+ROUTER RAW
+/pencil color=gray position=(0.01,1.28,4.46)\nid=8 type=paper/book/pencil color=gray position=(0.01,1.2
+============================================================
+ROUTE: ['chat']
+
+PHI-3 >
+Hello! How can I assist you today?
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+AUTONOMOUS CONTROL
+ROUTE: ['chat']
+ACTION: {'type': 'conversation'}
+
+USER > can you point the paper with id 9?
+============================================================
+PHI-3 THINKING
+============================================================
+ROUTER RAW
+id=7 type=paper/book/cable color=gray position=(0.01,1.28,4.46)\nid=8 type=paper/book/cable color=gray position=(
+============================================================
+ROUTE: ['vision_chat', 'vision_skill']
+
+PHI-3 >
+Okay.
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+AUTONOMOUS CONTROL
+ROUTE: ['vision_chat', 'vision_skill']
+============================================================
+GENERATING INTENTS
+============================================================
+GENERATING INTENT
+============================================================
+FINAL INTENT
+{
+    "intent": "point",
+    "user_message": "can you point the paper with id 9?",
+    "target_id": 9,
+    "target": {
+        "id": 9,
+        "center": [
+            0.1617515563964842,
+            -0.9444981276988983,
+            7.021039962768555
+        ],
+        "size": [
+            9.251496887207031,
+            5.286003744602203,
+            9.95792007446289
+        ],
+        "depth": 7.021039962768555,
+        "dominant_color": "gray",
+        "semantic_labels": [
+            "paper",
+            "book",
+            "notebook"
+        ],
+        "crop_box": [
+            0,
+            36,
+            767,
+            575
+        ]
+    }
+}
+============================================================
+FINAL INTENTS
+[
+    {
+        "intent": "point",
+        "user_message": "can you point the paper with id 9?",
+        "target_id": 9,
+        "target": {
+            "id": 9,
+            "center": [
+                0.1617515563964842,
+                -0.9444981276988983,
+                7.021039962768555
+            ],
+            "size": [
+                9.251496887207031,
+                5.286003744602203,
+                9.95792007446289
+            ],
+            "depth": 7.021039962768555,
+            "dominant_color": "gray",
+            "semantic_labels": [
+                "paper",
+                "book",
+                "notebook"
+            ],
+            "crop_box": [
+                0,
+                36,
+                767,
+                575
+            ]
+        }
+    }
+]
+============================================================
+POINT SKILL
+============================================================
+TARGET: {'id': 9, 'center': [0.1617515563964842, -0.9444981276988983, 7.021039962768555], 'size': [9.251496887207031, 5.286003744602203, 9.95792007446289], 'depth': 7.021039962768555, 'dominant_color': 'gray', 'semantic_labels': ['paper', 'book', 'notebook'], 'crop_box': [0, 36, 767, 575]}
+ACTION: {'joint_0': -0.16883143470500933, 'joint_1': -0.04652451872615232, 'joint_2': -0.2754652033773123, 'joint_3': 0.0, 'joint_4': 0.0, 'steps': 110, 'target_world': (1.061751556396484, 5.478960037231445, 1.698503744602203), 'target_distance': 6.444870926791826}
+============================================================
+FINAL ACTIONS
+[
+    {
+        "joint_0": -0.16883143470500933,
+        "joint_1": -0.04652451872615232,
+        "joint_2": -0.2754652033773123,
+        "joint_3": 0.0,
+        "joint_4": 0.0,
+        "steps": 110,
+        "target_world": [
+            1.061751556396484,
+            5.478960037231445,
+            1.698503744602203
+        ],
+        "target_distance": 6.444870926791826
+    }
+]
+ACTION: {'joint_0': -0.16883143470500933, 'joint_1': -0.04652451872615232, 'joint_2': -0.2754652033773123, 'joint_3': 0.0, 'joint_4': 0.0, 'steps': 110, 'target_world': (1.061751556396484, 5.478960037231445, 1.698503744602203), 'target_distance': 6.444870926791826}
+============================================================
+TARGET TRACKING
+TIP: [0.2634, 0.7956, 0.7476]
+TARGET: [1.0618, 5.479, 1.6985]
+ERROR_M: 4.8452
+
+USER > can you point the mouse with id 7?
+============================================================
+PHI-3 THINKING
+============================================================
+ROUTER RAW
+id=7 type=paper/book/pencil color=black position=(0.01,1.28,4.46)\nid=8 type=paper/book/pencil color=black position=(
+============================================================
+ROUTE: ['vision_chat', 'vision_skill']
+
+PHI-3 >
+Okay.
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+AUTONOMOUS CONTROL
+ROUTE: ['vision_chat', 'vision_skill']
+============================================================
+GENERATING INTENTS
+============================================================
+GENERATING INTENT
+============================================================
+FINAL INTENT
+{
+    "intent": "point",
+    "user_message": "can you point the mouse with id 7?",
+    "target_id": 7,
+    "target": {
+        "id": 7,
+        "center": [
+            3.3430080821116763,
+            -2.2231709480285646,
+            10.212331295013428
+        ],
+        "size": [
+            2.0453501204649607,
+            1.7783742904663087,
+            3.0012006759643555
+        ],
+        "depth": 10.212331295013428,
+        "dominant_color": "red",
+        "semantic_labels": [
+            "mouse",
+            "paper",
+            "notebook"
+        ],
+        "crop_box": [
+            608,
+            435,
+            758,
+            544
+        ]
+    }
+}
+============================================================
+FINAL INTENTS
+[
+    {
+        "intent": "point",
+        "user_message": "can you point the mouse with id 7?",
+        "target_id": 7,
+        "target": {
+            "id": 7,
+            "center": [
+                3.3430080821116763,
+                -2.2231709480285646,
+                10.212331295013428
+            ],
+            "size": [
+                2.0453501204649607,
+                1.7783742904663087,
+                3.0012006759643555
+            ],
+            "depth": 10.212331295013428,
+            "dominant_color": "red",
+            "semantic_labels": [
+                "mouse",
+                "paper",
+                "notebook"
+            ],
+            "crop_box": [
+                608,
+                435,
+                758,
+                544
+            ]
+        }
+    }
+]
+============================================================
+POINT SKILL
+============================================================
+TARGET: {'id': 7, 'center': [3.3430080821116763, -2.2231709480285646, 10.212331295013428], 'size': [2.0453501204649607, 1.7783742904663087, 3.0012006759643555], 'depth': 10.212331295013428, 'dominant_color': 'red', 'semantic_labels': ['mouse', 'paper', 'notebook'], 'crop_box': [608, 435, 758, 544]}
+ACTION: {'joint_0': -0.9494632775387156, 'joint_1': 0.22619117635047065, 'joint_2': -0.2754652033773123, 'joint_3': 0.0, 'joint_4': 0.0, 'steps': 110, 'target_world': (4.243008082111676, 2.2876687049865723, 0.04), 'target_distance': 5.2328432755166485}
+============================================================
+FINAL ACTIONS
+[
+    {
+        "joint_0": -0.9494632775387156,
+        "joint_1": 0.22619117635047065,
+        "joint_2": -0.2754652033773123,
+        "joint_3": 0.0,
+        "joint_4": 0.0,
+        "steps": 110,
+        "target_world": [
+            4.243008082111676,
+            2.2876687049865723,
+            0.04
+        ],
+        "target_distance": 5.2328432755166485
+    }
+]
+ACTION: {'joint_0': -0.9494632775387156, 'joint_1': 0.22619117635047065, 'joint_2': -0.2754652033773123, 'joint_3': 0.0, 'joint_4': 0.0, 'steps': 110, 'target_world': (4.243008082111676, 2.2876687049865723, 0.04), 'target_distance': 5.2328432755166485}
+============================================================
+TARGET TRACKING
+TIP: [1.2977, 0.179, 0.3207]
+TARGET: [4.243, 2.2877, 0.04]
+ERROR_M: 3.6332
+
+USER > can you raise your arm?
+============================================================
+PHI-3 THINKING
+============================================================
+ROUTER RAW
+=paper/book/pencil color=black position=(0.01,1.28,4.46)\nid=8 type=paper/book/pencil color=black position=(0.01
+============================================================
+ROUTE: ['vision_chat', 'vision_skill']
+
+PHI-3 >
+Okay.
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+AUTONOMOUS CONTROL
+ROUTE: ['vision_chat', 'vision_skill']
+============================================================
+GENERATING INTENTS
+============================================================
+GENERATING INTENT
+============================================================
+FINAL INTENT
+{
+    "intent": "raise_low",
+    "user_message": "can you raise your arm?",
+    "direction": "raise"
+}
+============================================================
+FINAL INTENTS
+[
+    {
+        "intent": "raise_low",
+        "user_message": "can you raise your arm?",
+        "direction": "raise"
+    }
+]
+============================================================
+RAISE/LOW SKILL
+============================================================
+============================================================
+FINAL ACTIONS
+[
+    {
+        "joint_0": -0.9494632775387156,
+        "joint_1": -0.12380882364952933,
+        "joint_2": -0.5254652033773123,
+        "joint_3": -0.1,
+        "joint_4": 0.0,
+        "steps": 100
+    }
+]
+ACTION: {'joint_0': -0.9494632775387156, 'joint_1': -0.12380882364952933, 'joint_2': -0.5254652033773123, 'joint_3': -0.1, 'joint_4': 0.0, 'steps': 100}
+
+USER > can you raise higher?
+============================================================
+PHI-3 THINKING
+============================================================
+ROUTER RAW
+paper/book/pencil color=black position=(0.01,0.0,0.0)\nid=8 type=paper/book/pencil color=black position=(0.01,0.
+============================================================
+ROUTE: ['vision_chat', 'vision_skill']
+
+PHI-3 >
+Okay.
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+AUTONOMOUS CONTROL
+ROUTE: ['vision_chat', 'vision_skill']
+============================================================
+GENERATING INTENTS
+============================================================
+GENERATING INTENT
+============================================================
+FINAL INTENT
+{
+    "intent": "motion",
+    "user_message": "can you raise higher?",
+    "direction": "raise",
+    "motion": "wave"
+}
+============================================================
+FINAL INTENTS
+[
+    {
+        "intent": "motion",
+        "user_message": "can you raise higher?",
+        "motion": "wave"
+    }
+]
+============================================================
+MOTION SKILL
+============================================================
+============================================================
+FINAL ACTIONS
+[
+    {
+        "type": "sequence",
+        "actions": [
+            {
+                "joint_0": -0.9494632775387156,
+                "joint_1": -0.75,
+                "joint_2": -1.15,
+                "joint_3": -0.2,
+                "joint_4": -0.75,
+                "steps": 90
+            },
+            {
+                "joint_0": -0.9494632775387156,
+                "joint_1": -0.75,
+                "joint_2": -1.15,
+                "joint_3": -0.2,
+                "joint_4": 0.75,
+                "steps": 45
+            },
+            {
+                "joint_0": -0.9494632775387156,
+                "joint_1": -0.75,
+                "joint_2": -1.15,
+                "joint_3": -0.2,
+                "joint_4": -0.75,
+                "steps": 45
+            },
+            {
+                "joint_0": -0.9494632775387156,
+                "joint_1": -0.75,
+                "joint_2": -1.15,
+                "joint_3": -0.2,
+                "joint_4": 0.75,
+                "steps": 45
+            },
+            {
+                "joint_0": -0.9494632775387156,
+                "joint_1": -0.45,
+                "joint_2": -0.8,
+                "joint_3": -0.1,
+                "joint_4": 0.0,
+                "steps": 70
+            }
+        ]
+    }
+]
+ACTION: {'type': 'sequence', 'actions': [{'joint_0': -0.9494632775387156, 'joint_1': -0.75, 'joint_2': -1.15, 'joint_3': -0.2, 'joint_4': -0.75, 'steps': 90}, {'joint_0': -0.9494632775387156, 'joint_1': -0.75, 'joint_2': -1.15, 'joint_3': -0.2, 'joint_4': 0.75, 'steps': 45}, {'joint_0': -0.9494632775387156, 'joint_1': -0.75, 'joint_2': -1.15, 'joint_3': -0.2, 'joint_4': -0.75, 'steps': 45}, {'joint_0': -0.9494632775387156, 'joint_1': -0.75, 'joint_2': -1.15, 'joint_3': -0.2, 'joint_4': 0.75, 'steps': 45}, {'joint_0': -0.9494632775387156, 'joint_1': -0.45, 'joint_2': -0.8, 'joint_3': -0.1, 'joint_4': 0.0, 'steps': 70}]}
+
+USER > oh thanks!, what else can you do?
+============================================================
+PHI-3 THINKING
+============================================================
+ROUTER RAW
+=7 type=paper/book/pencil color=black position=(0.01,1.28,4.46)\nid=8 type=paper/book/pencil color=black position=(0
+============================================================
+ROUTE: ['chat']
+
+PHI-3 >
+As a robot, I'm here to help with various tasks such as fetching items, providing information, or performing specific actions based on your needs. Let me know how I can assist you further
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+AUTONOMOUS CONTROL
+ROUTE: ['chat']
+ACTION: {'type': 'conversation'}
+
+USER > what is the closest object?    
+============================================================
+PHI-3 THINKING
+============================================================
+ROUTER RAW
+=paper/book/pencil color=black position=(0.01,1.28,4.46)\nid=8 type=paper/book/pencil color=black position=(0.01
+============================================================
+ROUTE: ['vision_chat']
+
+PHI-3 >
+The closest object is the mouse with id=7, which has a gray color and is located at position (3.34, -2.22, 10.21).
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+AUTONOMOUS CONTROL
+ROUTE: ['vision_chat']
+ACTION: {'type': 'conversation'}
+
+USER > can you point it?
+============================================================
+PHI-3 THINKING
+============================================================
+ROUTER RAW
+paper/book/pencil color=black position=(0.01,1.28,4.46)\nid=8 type=paper/book/pencil color=black position=(0.01,
+============================================================
+ROUTE: ['vision_chat', 'vision_skill']
+
+PHI-3 >
+Okay.
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+AUTONOMOUS CONTROL
+ROUTE: ['vision_chat', 'vision_skill']
+============================================================
+GENERATING INTENTS
+============================================================
+GENERATING INTENT
+============================================================
+FINAL INTENT
+{
+    "intent": "point",
+    "user_message": "can you point it?",
+    "target_id": 7,
+    "target": {
+        "id": 7,
+        "center": [
+            3.3430080821116763,
+            -2.2231709480285646,
+            10.212331295013428
+        ],
+        "size": [
+            2.0453501204649607,
+            1.7783742904663087,
+            3.0012006759643555
+        ],
+        "depth": 10.212331295013428,
+        "dominant_color": "red",
+        "semantic_labels": [
+            "mouse",
+            "paper",
+            "notebook"
+        ],
+        "crop_box": [
+            608,
+            435,
+            758,
+            544
+        ]
+    }
+}
+============================================================
+FINAL INTENTS
+[
+    {
+        "intent": "point",
+        "user_message": "can you point it?",
+        "target_id": 7,
+        "target": {
+            "id": 7,
+            "center": [
+                3.3430080821116763,
+                -2.2231709480285646,
+                10.212331295013428
+            ],
+            "size": [
+                2.0453501204649607,
+                1.7783742904663087,
+                3.0012006759643555
+            ],
+            "depth": 10.212331295013428,
+            "dominant_color": "red",
+            "semantic_labels": [
+                "mouse",
+                "paper",
+                "notebook"
+            ],
+            "crop_box": [
+                608,
+                435,
+                758,
+                544
+            ]
+        }
+    }
+]
+============================================================
+POINT SKILL
+============================================================
+TARGET: {'id': 7, 'center': [3.3430080821116763, -2.2231709480285646, 10.212331295013428], 'size': [2.0453501204649607, 1.7783742904663087, 3.0012006759643555], 'depth': 10.212331295013428, 'dominant_color': 'red', 'semantic_labels': ['mouse', 'paper', 'notebook'], 'crop_box': [608, 435, 758, 544]}
+ACTION: {'joint_0': -0.9494632775387156, 'joint_1': 0.22619117635047065, 'joint_2': -0.2754652033773123, 'joint_3': 0.0, 'joint_4': 0.0, 'steps': 110, 'target_world': (4.243008082111676, 2.2876687049865723, 0.04), 'target_distance': 5.2328432755166485}
+============================================================
+FINAL ACTIONS
+[
+    {
+        "joint_0": -0.9494632775387156,
+        "joint_1": 0.22619117635047065,
+        "joint_2": -0.2754652033773123,
+        "joint_3": 0.0,
+        "joint_4": 0.0,
+        "steps": 110,
+        "target_world": [
+            4.243008082111676,
+            2.2876687049865723,
+            0.04
+        ],
+        "target_distance": 5.2328432755166485
+    }
+]
+ACTION: {'joint_0': -0.9494632775387156, 'joint_1': 0.22619117635047065, 'joint_2': -0.2754652033773123, 'joint_3': 0.0, 'joint_4': 0.0, 'steps': 110, 'target_world': (4.243008082111676, 2.2876687049865723, 0.04), 'target_distance': 5.2328432755166485}
+============================================================
+TARGET TRACKING
+TIP: [1.2977, 0.179, 0.3207]
+TARGET: [4.243, 2.2877, 0.04]
+ERROR_M: 3.6332
+
+USER > ok thanks, bye!
+============================================================
+PHI-3 THINKING
+============================================================
+ROUTER RAW
+=paper/book/pencil color=black position=(0.01,1.28,4.46)\nid=8 type=paper/book/pencil color=black position=(0.01
+============================================================
+ROUTE: ['chat']
+
+PHI-3 >
+Robot: You're welcome! Goodbye! If you need any more assistance in the future, feel free to ask. Have a great day!
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+AUTONOMOUS CONTROL
+ROUTE: ['chat']
+ACTION: {'type': 'conversation'}
+
+USER > 
