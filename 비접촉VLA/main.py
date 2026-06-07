@@ -14,7 +14,7 @@ from pybullet_module import PyBulletModule
 # =========================================================
 
 IMAGE_PATH = (
-    r"C:\Users\0328j\OneDrive\Desktop\IMG_2560.jpg"
+    r"파일"
 )
 
 OUTPUT_DIR = "output"
