@@ -14,9 +14,9 @@ from ultralytics import SAM
 # SETTINGS
 # =========================================================
 
-IMAGE_PATH = r"C:\Users\0328j\OneDrive\Desktop\IMG_2560.jpg"
+IMAGE_PATH = r"파일"
 
-OUTPUT_DIR = r"C:\Users\0328j\OneDrive\Desktop\지각모델\output"
+OUTPUT_DIR = r"폴더"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
