@@ -1,0 +1,522 @@
+PS C:\Users\0328j\OneDrive\Desktop\지각모델> & .\.venv\Scripts\python.exe .\VLA2\main.py
+pybullet build time: May 26 2026 21:56:32
+============================================================
+VISION LANGUAGE ACTION SYSTEM
+============================================================
+============================================================
+INITIALIZING EXTRA FAST VISION ENGINE
+DEVICE: cpu
+CPU PROFILE: ON
+RESIZE WIDTH: 640
+DEPTH MODEL: depth-anything/Depth-Anything-V2-Small-hf
+============================================================
+LOADING MODELS
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Device set to use cpu
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+VISION ENGINE READY
+============================================================
+INITIALIZING PYBULLET
+============================================================
+INITIALIZING PYBULLET
+starting thread 0
+started testThreads thread 0 with threadHandle 00000000000013BC
+argc=2
+argv[0] = --unused
+argv[1] = --start_demo_name=Physics Server
+ExampleBrowserThreadFunc started
+Version = 4.6.0 - Build 32.0.101.6737
+Vendor = Intel
+Renderer = Intel(R) Graphics
+b3Printf: Selected demo: Physics Server
+starting thread 0
+started MotionThreads thread 0 with threadHandle 0000000000001698
+MotionThreadFunc thread started
+============================================================
+CREATING 5-DOF ARM ROBOT
+============================================================
+PYBULLET READY
+============================================================
+COORDINATE CHECK
+VISION: x=right y=up z=forward
+PYBULLET: x=right y=forward z=up
+STATUS: OK
+
+[아두이노] 시리얼 포트 연결 시도 중...
+============================================================
+INITIALIZING PHI-3
+============================================================
+INITIALIZING ATTENTION ROBOT (SPEED & COGNITIVE HYBRID VERSION)
+DEVICE: cpu
+============================================================
+LOADING PHI-3 INSTRUCT MODEL
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|                                                                                                   | 0/2 [00:00<?, ?it/s][아두이노] COM6 포트연결 성공!
+제어 핀: 2번(joint_0), 7번(joint_1), 9번(joint_2), 11번(그리퍼)
+7번 핀(joint_1) -> 095도
+9번 핀(joint_2) -> 085도
+11번 핀(그리퍼) -> 010도
+7번 핀(joint_1) -> 099도
+9번 핀(joint_2) -> 080도
+11번 핀(그리퍼) -> 020도
+9번 핀(joint_2) -> 075도
+11번 핀(그리퍼) -> 030도
+9번 핀(joint_2) -> 070도
+11번 핀(그리퍼) -> 040도
+9번 핀(joint_2) -> 065도
+11번 핀(그리퍼) -> 050도
+9번 핀(joint_2) -> 060도
+11번 핀(그리퍼) -> 060도
+9번 핀(joint_2) -> 059도
+11번 핀(그리퍼) -> 070도
+11번 핀(그리퍼) -> 080도
+11번 핀(그리퍼) -> 085도
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:04<00:00,  2.16s/it]
+Some parameters are on the meta device because they were offloaded to the disk and cpu.
+============================================================
+MEMORY SYSTEM READY
+============================================================
+MODEL WARMUP RUN
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+============================================================
+COGNITIVE ATTENTION ROBOT READY
+============================================================
+SYSTEM READY
+============================================================
+COMMANDS:
+  exit
+  objects
+  history
+  clear
+============================================================
+
+USER > hello?
+============================================================
+PHI-3 THINKING
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 0
+============================================================
+DISPATCHING COGNITIVE ROUTE: ['vision_chat']
+
+PHI-3 >
+Hello there! It seems like we have quite the collection of items around us. I notice a red notebook on the table; it looks pretty vibrant against the gray backdrop. What brings you here today?
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+ACTIVATING SYSTEM CONTROL WITH HYBRID COGNITIVE MODULE
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 0
+[CONTROL BYPASS] Conversational query. Bypassing physical execution.
+ACTION: {'type': 'conversation', 'route_fallback': ['vision_chat']}
+
+USER > what notebook?                      
+============================================================
+PHI-3 THINKING
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 0
+============================================================
+DISPATCHING COGNITIVE ROUTE: ['vision_chat']
+
+PHI-3 >
+Assistant: The notebook in question is a red one with dimensions 2.67 inches wide by 8.832 inches tall and placed at coordinates (left_right:2.67, front_back:8.832). Its current status indicates that it's visible to you. Would you like to know more about this item or perhaps its contents?
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+ACTIVATING SYSTEM CONTROL WITH HYBRID COGNITIVE MODULE
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 0
+[CONTROL BYPASS] Conversational query. Bypassing physical execution.
+ACTION: {'type': 'conversation', 'route_fallback': ['vision_chat']}
+
+USER > can you point it?
+============================================================
+PHI-3 THINKING
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 0
+============================================================
+DISPATCHING COGNITIVE ROUTE: ['vision_skill']
+
+PHI-3 >
+Understood. Starting movement sequence.
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+ACTIVATING SYSTEM CONTROL WITH HYBRID COGNITIVE MODULE
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 0
+============================================================
+PLANNING MOTOR INTENT SEQUENCES
+============================================================
+GENERATING SINGLE MOTOR INTENT (LLM COGNITION ENABLED)
+[INTENT INTERCEPTOR RESPONSE]: Output: {"intent":"point_object","object_id":6,"coordinates":{"x":2.67,"y":8.832}}
+============================================================
+POINT SKILL
+============================================================
+TARGET: {'id': 6, 'semantic_labels': ['book', 'paper', 'notebook'], 'dominant_color': 'red', 'center': [2.670436314344406, -1.478475066423416, 8.832098484039307], 'status': 'visible', 'last_seen': '18:24:02'}
+ACTION: {'joint_0': -0.6797056880087645, 'joint_1': 0.22014343481369447, 'joint_2': -0.2754652033773123, 'joint_3': 0.0, 'joint_4': 0.0, 'steps': 110, 'target_world': (3.570436314344406, 3.6679015159606934, 0.04), 'target_distance': 5.69367800982081}
+ACTION: {'joint_0': -0.6797056880087645, 'joint_1': 0.22014343481369447, 'joint_2': -0.2754652033773123, 'joint_3': 0.0, 'joint_4': 0.0, 'steps': 110, 'target_world': (3.570436314344406, 3.6679015159606934, 0.04), 'target_distance': 5.69367800982081}
+2번 핀(joint_0) -> 085도
+7번 핀(joint_1) -> 104도
+9번 핀(joint_2) -> 064도
+11번 핀(그리퍼) -> 088도
+2번 핀(joint_0) -> 080도
+7번 핀(joint_1) -> 103도
+9번 핀(joint_2) -> 069도
+11번 핀(그리퍼) -> 085도
+2번 핀(joint_0) -> 075도
+7번 핀(joint_1) -> 099도
+7번 핀(joint_1) -> 094도
+9번 핀(joint_2) -> 064도
+11번 핀(그리퍼) -> 075도
+2번 핀(joint_0) -> 070도
+7번 핀(joint_1) -> 096도
+9번 핀(joint_2) -> 069도
+11번 핀(그리퍼) -> 085도
+2번 핀(joint_0) -> 065도
+7번 핀(joint_1) -> 100도
+9번 핀(joint_2) -> 070도
+2번 핀(joint_0) -> 060도
+7번 핀(joint_1) -> 095도
+9번 핀(joint_2) -> 075도
+11번 핀(그리퍼) -> 089도
+2번 핀(joint_0) -> 055도
+7번 핀(joint_1) -> 090도
+9번 핀(joint_2) -> 070도
+11번 핀(그리퍼) -> 099도
+2번 핀(joint_0) -> 052도
+7번 핀(joint_1) -> 085도
+9번 핀(joint_2) -> 075도
+11번 핀(그리퍼) -> 089도
+7번 핀(joint_1) -> 080도
+9번 핀(joint_2) -> 070도
+11번 핀(그리퍼) -> 099도
+7번 핀(joint_1) -> 085도
+9번 핀(joint_2) -> 075도
+11번 핀(그리퍼) -> 091도
+7번 핀(joint_1) -> 090도
+9번 핀(joint_2) -> 080도
+7번 핀(joint_1) -> 095도
+9번 핀(joint_2) -> 085도
+7번 핀(joint_1) -> 100도
+9번 핀(joint_2) -> 090도
+7번 핀(joint_1) -> 105도
+9번 핀(joint_2) -> 091도
+7번 핀(joint_1) -> 108도
+============================================================
+TARGET TRACKING
+TIP: [1.0034, 0.4922, 0.3351]
+TARGET: [3.5704, 3.6679, 0.04]
+ERROR_M: 4.0941
+
+USER > now can you raise your arm as high as you can? 
+============================================================
+PHI-3 THINKING
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 0
+============================================================
+DISPATCHING COGNITIVE ROUTE: ['vision_skill']
+
+PHI-3 >
+Understood. Starting movement sequence.
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+ACTIVATING SYSTEM CONTROL WITH HYBRID COGNITIVE MODULE
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 0
+============================================================
+PLANNING MOTOR INTENT SEQUENCES
+============================================================
+GENERATING SINGLE MOTOR INTENT (LLM COGNITION ENABLED)
+[INTENT INTERCEPTOR RESPONSE]: Robot: Initiating elevation protocol. Please stand clear while I adjust my positioning mechanism for maximum reachability. Safety first—ensure no obstructions are present before proceeding.
+============================================================
+RAISE/LOW SKILL
+============================================================
+ACTION: {'joint_0': -0.6797056880087645, 'joint_1': -0.1298565651863055, 'joint_2': -0.5254652033773123, 'joint_3': -0.1, 'joint_4': 0.0, 'steps': 100}
+7번 핀(joint_1) -> 113도
+9번 핀(joint_2) -> 086도
+11번 핀(그리퍼) -> 085도
+7번 핀(joint_1) -> 117도
+9번 핀(joint_2) -> 081도
+9번 핀(joint_2) -> 076도
+9번 핀(joint_2) -> 071도
+9번 핀(joint_2) -> 066도
+9번 핀(joint_2) -> 061도
+9번 핀(joint_2) -> 060도
+
+USER > can you raise your arm more higher?
+============================================================
+PHI-3 THINKING
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 0
+============================================================
+DISPATCHING COGNITIVE ROUTE: ['vision_skill']
+
+PHI-3 >
+Understood. Starting movement sequence.
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+ACTIVATING SYSTEM CONTROL WITH HYBRID COGNITIVE MODULE
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 0
+============================================================
+PLANNING MOTOR INTENT SEQUENCES
+============================================================
+GENERATING SINGLE MOTOR INTENT (LLM COGNITION ENABLED)
+[INTENT INTERCEPTOR RESPONSE]: Robot: Apologies, but my design does not include an upper body for raising arms. My capabilities are focused on assisting within our shared environment. Is there something else I might help you with
+============================================================
+RAISE/LOW SKILL
+============================================================
+ACTION: {'joint_0': -0.6797056880087645, 'joint_1': -0.4798565651863055, 'joint_2': -0.7754652033773123, 'joint_3': -0.2, 'joint_4': 0.0, 'steps': 100}
+7번 핀(joint_1) -> 122도
+9번 핀(joint_2) -> 055도
+11번 핀(그리퍼) -> 081도
+7번 핀(joint_1) -> 127도
+9번 핀(joint_2) -> 050도
+11번 핀(그리퍼) -> 079도
+7번 핀(joint_1) -> 132도
+9번 핀(joint_2) -> 046도
+7번 핀(joint_1) -> 137도
+
+USER > can you lower your arm?            
+============================================================
+PHI-3 THINKING
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 0
+============================================================
+DISPATCHING COGNITIVE ROUTE: ['vision_skill']
+============================================================
+COMPRESSING MEMORY
+MEMORY SAVED:
+memory\conversations\memory_0.json
+
+PHI-3 >
+Understood. Starting movement sequence.
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+ACTIVATING SYSTEM CONTROL WITH HYBRID COGNITIVE MODULE
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 1
+============================================================
+PLANNING MOTOR INTENT SEQUENCES
+============================================================
+GENERATING SINGLE MOTOR INTENT (LLM COGNITION ENABLED)
+[INTENT INTERCEPTOR RESPONSE]: Robot: Lowering my arm now. Please wait for me to complete the action.
+============================================================
+RAISE/LOW SKILL
+============================================================
+ACTION: {'joint_0': -0.6797056880087645, 'joint_1': -0.1298565651863055, 'joint_2': -0.5754652033773122, 'joint_3': -0.1, 'joint_4': 0.0, 'steps': 100}
+7번 핀(joint_1) -> 132도
+9번 핀(joint_2) -> 051도
+11번 핀(그리퍼) -> 085도
+7번 핀(joint_1) -> 127도
+9번 핀(joint_2) -> 056도
+7번 핀(joint_1) -> 122도
+9번 핀(joint_2) -> 058도
+7번 핀(joint_1) -> 117도
+
+USER > lastly, can you do the grabing action?
+============================================================
+PHI-3 THINKING
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 1
+============================================================
+DISPATCHING COGNITIVE ROUTE: ['vision_chat']
+
+PHI-3 >
+I can see objects in front of me.
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+ACTIVATING SYSTEM CONTROL WITH HYBRID COGNITIVE MODULE
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 1
+[CONTROL BYPASS] Conversational query. Bypassing physical execution.
+ACTION: {'type': 'conversation', 'route_fallback': ['vision_chat']}
+
+USER > can you do the grab action?
+============================================================
+PHI-3 THINKING
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 1
+============================================================
+DISPATCHING COGNITIVE ROUTE: ['vision_skill']
+
+PHI-3 >
+Understood. Starting movement sequence.
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+ACTIVATING SYSTEM CONTROL WITH HYBRID COGNITIVE MODULE
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 1
+============================================================
+PLANNING MOTOR INTENT SEQUENCES
+============================================================
+GENERATING SINGLE MOTOR INTENT (LLM COGNITION ENABLED)
+[INTENT INTERCEPTOR RESPONSE]: Robot: Initiating grasping protocol... Please ensure safety measures are in place before proceeding.
+
+(Note: As an AI language model developed by Microsoft, I don't
+[고정 집기 스킬] 계산된 정밀 하드웨어 각도로 하강 및 집기 시퀀스를 실행합니다.
+-> 목표 하드웨어 각도: 7번 핀(joint_1)=140도, 9번 핀(joint_2)=150도
+-> 그리퍼(11번 핀): 열림 0도 -> 닫힘 90도
+ACTION: {'type': 'sequence', 'actions': [{'joint_0': -0.6797056880087645, 'joint_1': -0.2, 'joint_2': 0.5, 'joint_3': -1.571, 'joint_4': 0.0, 'steps': 100}, {'joint_0': -0.6797056880087645, 'joint_1': -0.524, 'joint_2': 1.047, 'joint_3': -1.571, 'joint_4': 0.0, 'steps': 120}, {'joint_0': -0.6797056880087645, 'joint_1': -0.524, 'joint_2': 1.047, 'joint_3': 0.0, 'joint_4': 0.0, 'steps': 100}, {'joint_0': -0.6797056880087645, 'joint_1': -0.8240000000000001, 'joint_2': 0.847, 'joint_3': 0.0, 'joint_4': 0.0, 'steps': 120}]}
+7번 핀(joint_1) -> 122도
+9번 핀(joint_2) -> 063도
+11번 핀(그리퍼) -> 075도
+7번 핀(joint_1) -> 121도
+9번 핀(joint_2) -> 068도
+11번 핀(그리퍼) -> 065도
+9번 핀(joint_2) -> 073도
+11번 핀(그리퍼) -> 055도
+9번 핀(joint_2) -> 078도
+11번 핀(그리퍼) -> 045도
+9번 핀(joint_2) -> 083도
+11번 핀(그리퍼) -> 035도
+9번 핀(joint_2) -> 088도
+11번 핀(그리퍼) -> 025도
+9번 핀(joint_2) -> 093도
+11번 핀(그리퍼) -> 015도
+9번 핀(joint_2) -> 098도
+11번 핀(그리퍼) -> 005도
+9번 핀(joint_2) -> 103도
+11번 핀(그리퍼) -> 000도
+9번 핀(joint_2) -> 108도
+9번 핀(joint_2) -> 113도
+9번 핀(joint_2) -> 118도
+7번 핀(joint_1) -> 126도
+9번 핀(joint_2) -> 123도
+7번 핀(joint_1) -> 131도
+9번 핀(joint_2) -> 128도
+7번 핀(joint_1) -> 136도
+9번 핀(joint_2) -> 133도
+7번 핀(joint_1) -> 140도
+9번 핀(joint_2) -> 138도
+9번 핀(joint_2) -> 143도
+9번 핀(joint_2) -> 148도
+9번 핀(joint_2) -> 149도
+9번 핀(joint_2) -> 150도
+11번 핀(그리퍼) -> 010도
+9번 핀(joint_2) -> 149도
+11번 핀(그리퍼) -> 020도
+11번 핀(그리퍼) -> 030도
+11번 핀(그리퍼) -> 040도
+11번 핀(그리퍼) -> 050도
+11번 핀(그리퍼) -> 060도
+11번 핀(그리퍼) -> 070도
+11번 핀(그리퍼) -> 080도
+11번 핀(그리퍼) -> 090도
+7번 핀(joint_1) -> 145도
+9번 핀(joint_2) -> 144도
+7번 핀(joint_1) -> 150도
+9번 핀(joint_2) -> 139도
+7번 핀(joint_1) -> 155도
+9번 핀(joint_2) -> 138도
+7번 핀(joint_1) -> 157도
+
+USER > ok thanks
+============================================================
+PHI-3 THINKING
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 0
+============================================================
+DISPATCHING COGNITIVE ROUTE: ['vision_chat']
+
+PHI-3 >
+Scene:
+id=0 type=paper/book/mouse color=gray position=(left_right:0.295, front_back:7.323, height:1.332) status=visible
+id=1 type=book/mouse/cable color=gray position=(left_right:-0.578, front_back:5.499, height:-0.318) status=visible
+id
+
+============================================================
+GENERATING ROBOT ACTION
+============================================================
+ACTIVATING SYSTEM CONTROL WITH HYBRID COGNITIVE MODULE
+============================================================
+BUILDING MEMORY CONTEXT
+============================================================
+SEARCHING MEMORY
+MEMORY RESULTS: 0
+[CONTROL BYPASS] Conversational query. Bypassing physical execution.
+ACTION: {'type': 'conversation', 'route_fallback': ['vision_chat']}
+
+USER > 
+============================================================
+INTERRUPTED
+============================================================
+============================================================
+CLOSING PYBULLET
+numActiveThreads = 0
+stopping threads
+Thread with taskId 0 with handle 0000000000001698 exiting
+Thread TERMINATED
+finished
+numActiveThreads = 0
+btShutDownExampleBrowser stopping threads
+Thread with taskId 0 with handle 00000000000013BC exiting
+Thread TERMINATED
+
+[아두이노] 동기화 중 오류 발생: Not connected to physics server.
+[아두이노] 시리얼 연결 종료
+PS C:\Users\0328j\OneDrive\Desktop\지각모델>
