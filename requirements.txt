@@ -1,0 +1,26 @@
+# Core numerical and image processing
+numpy
+scipy
+opencv-python
+Pillow
+
+# Vision, depth estimation, segmentation, and language models
+# Install PyTorch separately for your OS/CUDA setup if needed:
+# https://pytorch.org/get-started/locally/
+torch
+transformers
+accelerate
+safetensors
+huggingface-hub
+ultralytics
+
+# 3D point clouds and simulation
+open3d
+pybullet
+
+# Conversation memory / embeddings
+sentence-transformers
+scikit-learn
+
+# Arduino serial communication
+pyserial
