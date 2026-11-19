@@ -64,7 +64,7 @@
 | `phi_reasoning_module.py` | 대화 라우팅, 기억 관리 연동, 로봇 스킬 선택 |
 | `memory_manager.py` | 단기 및 장기 대화 기억 관리 |
 | `semantic_analyzer.py` | 명령의 의미 원소 분석 |
-| `pybullet_module.py` | 5축 로봄팔 PyBullet 시뮬레이션 |
+| `pybullet_module.py` | 5축 로봇팔 PyBullet 시뮬레이션 |
 | `robot_geometry.py` | 카메라 좌표와 PyBullet 좌표 변환 상수 |
 | `skills/` | `look`, `point`, `grasp` 등 로봇 스킬 구현 |
 | `words_data.json` | 의미 원소와 단어 매핑 데이터 |
@@ -220,7 +220,9 @@ What can you see?
 
 ## 라이선스
 
-아직 라이선스 파일이 없습니다. 공개 저장소의 사용 조건을 명확히 하려면 라이선스를 추가해야 합니다.
+이 프로젝트의 소스 코드는 **PolyForm Noncommercial License 1.0.0**으로 배포됩니다. 상세 조건은 저장소 루트의 [`LICENSE`](LICENSE) 파일을 확인하세요.
+
+상업적 사용이 제한되며, 사용하려는 모델과 라이브러리에도 별도의 라이선스가 적용될 수 있습니다.
 
 ## 기여
 
