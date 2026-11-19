@@ -1,6 +1,6 @@
 # =========================================================
 # main.py
-# =========================================================& .\.venv\Scripts\python.exe .\VLA2\main.py  
+# =========================================================  
 
 import json
 import threading
@@ -18,7 +18,7 @@ from pybullet_module import PyBulletModule
 # =========================================================
 
 IMAGE_PATH = (
-    r"C:\Users\0328j\OneDrive\Desktop\WIN_20260613_13_59_39_Pro.jpg"
+    r"***.jpg"
 )
 OUTPUT_DIR = "output"
 
