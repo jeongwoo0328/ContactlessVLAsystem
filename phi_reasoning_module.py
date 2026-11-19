@@ -1,9 +1,3 @@
-# =========================================================
-# phi_reasoning_module.py
-# COGNITIVE VISION ARCHITECTURE (Qwen-2.5 0.5B SLM & Julia-1 Routing Engine)
-# WITH INTEGRATED SPATIAL MEMORY, MEMORY MANAGER & SPEED OPTIMIZATION
-# =========================================================
-
 import json
 import os
 import re
