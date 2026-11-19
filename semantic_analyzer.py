@@ -5,7 +5,10 @@ from difflib import SequenceMatcher
 from itertools import zip_longest
 
 class SemanticAnalyzer:
-    def __init__(self, json_path=r"C:\Users\0328j\OneDrive\Desktop\지각모델\VLA2\words_data.json"):
+    def __init__(self, json_path=os.path.join(
+    os.path.dirname(__file__),
+    "words_data.json"
+)):
         self.json_path = json_path
         self.atoms = {}
         self.words = {}
